@@ -1,0 +1,53 @@
+/* 旸谷智能科技 - 配色方案 */
+
+:root {
+  --yanggu-primary: #0066CC;      /* 主色：科技蓝 */
+  --yanggu-secondary: #00A3E0;    /* 辅助色：天空蓝 */
+  --yanggu-accent: #FF9900;        /* 强调色：橙色 - CTA按钮 */
+  --yanggu-bg-dark: #1A1A2E;      /* 背景色：深色 */
+  --yanggu-bg-light: #F5F7FA;      /* 背景色：浅色 */
+}
+
+/* 1. 背景色：深色 #1A1A2E（页眉、页脚） */
+.bg-yanggu-deep {
+  background-color: var(--yanggu-bg-dark) !important;
+}
+
+/* 2. 主内容区：浅色背景 #F5F7FA */
+body {
+  background-color: var(--yanggu-bg-light) !important;
+}
+
+/* 3. 导航栏：辅助色 天空蓝 #00A3E0 */
+header nav,
+header nav.pv3.ph3.ph4-ns {
+  background-color: var(--yanggu-secondary) !important;
+  width: 100%;
+}
+
+/* 4. 按钮和强调：橙色 #FF9900 */
+input[type="submit"],
+input[type="button"],
+button.bg-black,
+button {
+  background-color: var(--yanggu-accent) !important;
+  color: #fff !important;
+  border-color: var(--yanggu-accent) !important;
+}
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover {
+  background-color: #e68a00 !important;
+  color: #fff !important;
+}
+strong, b {
+  color: var(--yanggu-accent) !important;
+}
+a.link:hover,
+a.dim:hover,
+a:hover {
+  color: var(--yanggu-accent) !important;
+}
+main a:not(.no-underline):hover {
+  color: var(--yanggu-accent) !important;
+}

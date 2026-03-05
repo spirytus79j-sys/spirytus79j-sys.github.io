@@ -1,0 +1,15 @@
+# 旸谷智能科技官网 - 主题参数
+description = "杭州旸谷智能科技有限公司 - 光联万物、智创未来"
+author = "杭州旸谷智能科技有限公司"
+
+# 首页配置
+[ananke.home]
+content_alignment = "center"
+
+# 不显示近期文章（企业官网模式）
+[ananke]
+show_recent_posts = false
+
+# 社交媒体（按需取消注释并填写）
+# [ananke.social.follow]
+# networks = ["linkedin", "github", "x-twitter"]

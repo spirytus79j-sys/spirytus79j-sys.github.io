@@ -1,0 +1,5 @@
+{{ $text := default "联系我们" (.Get "text") }}
+{{ $url := default "/contact/" (.Get "url") }}
+<div class="tc mv4">
+  <a href="{{ $url }}" class="dib pa3 ph4-l white no-underline f5 f4-ns b br2" style="background-color: #FF9900;">{{ $text }}</a>
+</div>
