@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url><loc>https://yanggu-tech.github.io/categories/</loc></url><url><loc>https://yanggu-tech.github.io/tags/</loc></url><url><loc>https://yanggu-tech.github.io/products/</loc></url><url><loc>https://yanggu-tech.github.io/about/</loc></url><url><loc>https://yanggu-tech.github.io/</loc></url><url><loc>https://yanggu-tech.github.io/cases/</loc></url><url><loc>https://yanggu-tech.github.io/contact/</loc></url></urlset>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>http://localhost:1313/categories/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+  </url><url>
+    <loc>http://localhost:1313/products/</loc>
+  </url><url>
+    <loc>http://localhost:1313/about/</loc>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+  </url><url>
+    <loc>http://localhost:1313/cases/</loc>
+  </url><url>
+    <loc>http://localhost:1313/contact/</loc>
+  </url>
+</urlset>
