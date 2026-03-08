@@ -1,0 +1,6 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300">
+  <rect width="300" height="300" rx="20" fill="#ffffff" stroke="#d8e4ff"/>
+  <rect x="40" y="40" width="220" height="220" fill="#f0f6ff"/>
+  <path d="M70 70h160v160H70z" fill="none" stroke="#0b5bff" stroke-width="10" stroke-dasharray="10 8"/>
+  <text x="78" y="280" font-family="Arial, sans-serif" font-size="18" fill="#0f1b3d">Wechat QR Placeholder</text>
+</svg>

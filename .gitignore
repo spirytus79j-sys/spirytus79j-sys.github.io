@@ -1,0 +1,5 @@
+.codex-tmp-*/
+.hugo_build.lock
+~$*
+Thumbs.db
+.DS_Store

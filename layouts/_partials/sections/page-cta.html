@@ -1,0 +1,12 @@
+﻿{{ $ctaTitle := .Params.final_cta_title | default "准备开始你的智能化项目？" }}
+{{ $ctaText := .Params.final_cta_text | default "欢迎通过电话或微信联系我们，我们将在 1 个工作日内给出方案建议。" }}
+<section class="yg-section yg-final-cta">
+  <div>
+    <h2>{{ $ctaTitle }}</h2>
+    <p>{{ $ctaText }}</p>
+  </div>
+  <div class="yg-final-cta-actions">
+    <a class="yg-btn" href="tel:{{ site.Params.contact_phone }}">电话 {{ site.Params.contact_phone }}</a>
+    <a class="yg-btn yg-btn-ghost" href="/contact/">查看联系方式</a>
+  </div>
+</section>

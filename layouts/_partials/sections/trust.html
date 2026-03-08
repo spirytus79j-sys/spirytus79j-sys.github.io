@@ -1,0 +1,13 @@
+﻿{{ with .Params.trust_points }}
+<section class="yg-section yg-section-soft">
+  <div class="yg-section-head">
+    <h2>{{ $.Params.trust_title | default "为什么选择我们" }}</h2>
+    <p>{{ $.Params.trust_intro | default "以项目交付能力和长期服务能力建立客户信任。" }}</p>
+  </div>
+  <ul class="yg-trust-list">
+    {{ range . }}
+      <li>{{ . }}</li>
+    {{ end }}
+  </ul>
+</section>
+{{ end }}

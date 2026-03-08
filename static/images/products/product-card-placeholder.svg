@@ -1,0 +1,5 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560">
+  <rect width="900" height="560" fill="#f5f9ff"/>
+  <rect x="80" y="90" width="740" height="380" rx="20" fill="#e8f0ff" stroke="#0b5bff" stroke-opacity="0.4"/>
+  <text x="130" y="220" font-family="Arial, sans-serif" font-size="38" fill="#0f1b3d">Product Card Placeholder</text>
+</svg>

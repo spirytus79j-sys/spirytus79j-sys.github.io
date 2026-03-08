@@ -1,0 +1,24 @@
+{{/*
+  Project override for ananke style resource lookup.
+  It keeps theme-default lookup and adds fallback for project-level assets.
+*/}}
+{{ $resource := dict }}
+{{ $name := printf "%v" . }}
+
+{{ with resources.Get (fmt.Print "/ananke/css/" $name) }}
+  {{ $resource = . }}
+{{ end }}
+
+{{ if not $resource }}
+  {{ with resources.Get $name }}
+    {{ $resource = . }}
+  {{ end }}
+{{ end }}
+
+{{ if and (not $resource) (not (strings.HasPrefix $name "/")) }}
+  {{ with resources.Get (fmt.Print "/" $name) }}
+    {{ $resource = . }}
+  {{ end }}
+{{ end }}
+
+{{ return $resource }}

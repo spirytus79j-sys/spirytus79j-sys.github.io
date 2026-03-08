@@ -1,0 +1,26 @@
+{{ $current := .RelPermalink }}
+{{ $logoMark := site.Params.site_logo_mark }}
+{{ $logoAlt := site.Params.site_logo_alt | default "旸谷智能" }}
+{{ $brandShort := site.Params.site_brand_short | default "旸谷智能" }}
+<nav class="yg-nav" role="navigation" aria-label="主导航">
+  <div class="yg-nav-inner">
+    <a href="{{ .Site.Home.RelPermalink }}" class="yg-brand" aria-label="{{ .Site.Title }}">
+      {{ if $logoMark }}
+        <img class="yg-brand-mark" src="{{ $logoMark | relURL }}" alt="{{ $logoAlt }}" decoding="async">
+        <span class="yg-brand-text">{{ $brandShort }}</span>
+      {{ else }}
+        {{ .Site.Title }}
+      {{ end }}
+    </a>
+    <div class="yg-nav-links">
+      {{ range .Site.Menus.main }}
+        {{ $isActive := eq .URL $current }}
+        <a class="yg-nav-link {{ if $isActive }}is-active{{ end }}" href="{{ .URL }}">{{ .Name }}</a>
+      {{ end }}
+    </div>
+    <div class="yg-nav-cta">
+      <a class="yg-btn yg-btn-ghost" href="tel:{{ site.Params.contact_phone }}">热线 {{ site.Params.contact_phone }}</a>
+      <a class="yg-btn" href="/contact/">微信咨询</a>
+    </div>
+  </div>
+</nav>

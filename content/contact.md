@@ -1,37 +1,51 @@
 ---
 title: "联系我们"
-description: "杭州旸谷智能科技有限公司 - 地址、电话、邮箱及在线留言"
+description: "联系旸谷智能，获取分布式光纤传感与水务管网监测项目的电话、微信与邮箱支持。"
+hero_kicker: "联系团队"
+hero_title: "电话与微信直联，快速评估项目"
+hero_subtitle: "建议优先电话沟通管网现状和目标，我们将在明确场景后给出可执行推进建议。"
+cta_primary:
+  text: "立即电话咨询"
+  url: "tel:0571-88210873"
+cta_secondary:
+  text: "查看解决方案"
+  url: "/solutions/"
+cards_title: "联系方式"
+cards_intro: "工作日支持技术与商务对接，可预约线上或线下沟通。"
+cards:
+  - title: "联系电话"
+    desc: "0571-88210873"
+    icon: "Phone"
+    link: "tel:0571-88210873"
+  - title: "微信咨询"
+    desc: "添加企业微信后请备注单位与项目场景，便于快速对接。"
+    icon: "WeChat"
+    link: "/images/contact/wechat-qr-placeholder.svg"
+  - title: "商务邮箱"
+    desc: "postmaster@ygznkj.top"
+    icon: "Email"
+    link: "mailto:postmaster@ygznkj.top"
+  - title: "公司地址"
+    desc: "浙江省杭州市余杭区星运鲲鹏中心7幢16楼"
+    icon: "Address"
+    link: "https://map.baidu.com"
+trust_title: "沟通效率建议"
+trust_intro: "为缩短评估周期，建议首次沟通准备以下信息。"
+trust_points:
+  - "管网类型、管径、材质与埋深分布"
+  - "当前漏损率区间与主要风险区段"
+  - "计划上线时间与阶段目标"
+  - "现场协同团队与数据基础情况"
+final_cta_title: "现在开始项目评估"
+final_cta_text: "一个电话先明确问题边界，再进入方案设计与试点计划。"
 ---
 
-## 联系方式
+## 联系建议
 
-| 项目 | 内容 |
-|------|------|
-| **公司地址** | 浙江省杭州市（具体地址待补充） |
-| **联系电话** | 400-XXX-XXXX（待补充） |
-| **电子邮箱** | contact@yanggu-tech.com（示例） |
+首次沟通建议电话直连；需补充材料时可通过邮箱发送。微信适合后续持续跟进施工窗口、现场安排与方案细节。
 
----
+## 相关页面
 
-## 办公时间
-
-- **周一至周五**：9:00 - 18:00  
-- **周六、周日**：休息（技术支持可预约）
-
----
-
-## 在线留言
-
-如有合作意向或技术咨询，请填写下方表单，我们将尽快与您联系。
-
-{{< form-contact action="https://formspree.io/f/your-form-id" >}}
-
-> **说明**：表单需配置后端支持。请至 [Formspree](https://formspree.io/) 注册并创建表单，将上方 `action` 替换为您的表单地址（如 `https://formspree.io/f/xxxxxx`）。
-
----
-
-## 社交媒体
-
-- **微信公众号**：旸谷智能科技（示例）
-- **LinkedIn**：（待补充）
-- **官网**：https://yanggu-tech.com（待补充）
+- [产品](/products/)
+- [解决方案](/solutions/)
+- [案例介绍](/cases/)

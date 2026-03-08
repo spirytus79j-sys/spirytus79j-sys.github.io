@@ -1,0 +1,13 @@
+﻿{{ define "main" }}
+<div class="yg-page">
+  {{ partial "sections/hero.html" . }}
+
+  <section class="yg-section yg-content-block">
+    <div class="yg-rich-content">{{ .Content }}</div>
+  </section>
+
+  {{ partial "sections/cards.html" . }}
+  {{ partial "sections/trust.html" . }}
+  {{ partial "sections/page-cta.html" . }}
+</div>
+{{ end }}

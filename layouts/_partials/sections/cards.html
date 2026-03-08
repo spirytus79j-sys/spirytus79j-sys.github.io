@@ -1,0 +1,55 @@
+﻿{{ with .Params.cards }}
+{{ $variant := $.Params.bento_variant | default "default" }}
+{{ $iconMap := dict
+  "Product" "product-neon.svg"
+  "Solution" "solution-neon.svg"
+  "Case" "case-neon.svg"
+  "Service" "service-neon.svg"
+  "Sense" "sense-neon.svg"
+  "Edge" "edge-neon.svg"
+  "Data" "data-neon.svg"
+  "BI" "bi-neon.svg"
+  "API" "api-neon.svg"
+  "Ops" "ops-neon.svg"
+  "MFG" "mfg-neon.svg"
+  "Energy" "energy-neon.svg"
+  "Park" "park-neon.svg"
+  "Logis" "logis-neon.svg"
+  "City" "city-neon.svg"
+  "Tech" "tech-neon.svg"
+  "Industry" "industry-neon.svg"
+  "PM" "pm-neon.svg"
+  "Support" "support-neon.svg"
+  "Case 01" "case-neon.svg"
+  "Case 02" "case-neon.svg"
+  "Case 03" "case-neon.svg"
+  "Case 04" "case-neon.svg"
+  "Phone" "phone-neon.svg"
+  "WeChat" "wechat-neon.svg"
+  "Email" "email-neon.svg"
+  "Address" "address-neon.svg"
+}} 
+<section class="yg-section yg-cards-section {{ if eq $variant "neon" }}is-neon{{ end }}">
+  <div class="yg-section-head">
+    <h2>{{ $.Params.cards_title | default "核心能力" }}</h2>
+    <p>{{ $.Params.cards_intro | default "围绕真实业务场景，提供可持续扩展的技术能力。" }}</p>
+  </div>
+  <div class="yg-card-grid {{ if eq $variant "neon" }}is-bento{{ end }}">
+    {{ range $index, $card := . }}
+      {{ $iconKey := $card.icon | default "default" }}
+      {{ $iconFile := index $iconMap $iconKey | default "default-neon.svg" }}
+      {{ $iconPath := printf "/images/icons/neon-3d/%s" $iconFile }}
+      <article class="yg-card {{ if eq $variant "neon" }}yg-glass-card{{ end }}">
+        <span class="yg-card-icon" aria-hidden="true">
+          <img src="{{ $iconPath }}" alt="" loading="lazy" decoding="async">
+        </span>
+        <h3>{{ $card.title }}</h3>
+        <p>{{ $card.desc }}</p>
+        {{ with $card.link }}
+          <a class="yg-card-link" href="{{ . | safeURL }}">了解更多</a>
+        {{ end }}
+      </article>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

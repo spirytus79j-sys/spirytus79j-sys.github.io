@@ -1,0 +1,20 @@
+﻿{{ partial "contact-float.html" . }}
+<footer class="yg-footer" role="contentinfo">
+  <div class="yg-footer-inner">
+    <div>
+      <p class="yg-footer-brand">{{ .Site.Title }}</p>
+      <p class="yg-footer-meta">{{ .Site.Params.contact_address }}</p>
+      <p class="yg-footer-meta">电话：<a href="tel:{{ .Site.Params.contact_phone }}">{{ .Site.Params.contact_phone }}</a> | 邮箱：<a href="mailto:{{ .Site.Params.contact_email }}">{{ .Site.Params.contact_email }}</a></p>
+      <p class="yg-footer-meta">服务时间：{{ .Site.Params.contact_hours }}</p>
+    </div>
+    <div>
+      <p class="yg-footer-title">快速导航</p>
+      <div class="yg-footer-links">
+        {{ range .Site.Menus.main }}
+          <a href="{{ .URL }}">{{ .Name }}</a>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+  <div class="yg-footer-bottom">© {{ now.Format "2006" }} {{ .Site.Title }}. All rights reserved.</div>
+</footer>

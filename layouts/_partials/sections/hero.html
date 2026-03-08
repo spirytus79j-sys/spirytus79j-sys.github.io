@@ -1,0 +1,50 @@
+{{ $heroTitle := .Params.hero_title | default .Title }}
+{{ $heroSubtitle := .Params.hero_subtitle | default .Description }}
+{{ $heroKicker := .Params.hero_kicker | default "AI + IoT 智能化升级" }}
+{{ $heroFx := .Params.hero_fx | default "default" }}
+{{ $heroLogo := .Params.hero_logo_override | default site.Params.site_logo_lockup }}
+{{ $heroLogoHome := site.Params.site_logo_lockup_bright | default $heroLogo }}
+{{ $heroLogoAlt := site.Params.site_logo_alt | default .Site.Title }}
+{{ $showHomeLogo := and .IsHome $heroLogo }}
+{{ $homeSimple := .IsHome }}
+{{ $heroWorkItems := .Params.hero_work_items }}
+{{ $titleClass := "yg-hero-title" }}
+{{ if eq $heroFx "glow" }}
+  {{ if $homeSimple }}
+    {{ $titleClass = printf "%s yg-slide-up is-delay-2" $titleClass }}
+  {{ else }}
+    {{ $titleClass = printf "%s is-glow yg-slide-up is-delay-2" $titleClass }}
+  {{ end }}
+{{ end }}
+<section class="yg-hero">
+  <div class="yg-hero-inner">
+    {{ if $showHomeLogo }}
+      <div class="yg-hero-logo {{ if eq $heroFx "glow" }}yg-slide-up is-delay-1{{ end }}">
+        <img src="{{ $heroLogoHome | relURL }}" alt="{{ $heroLogoAlt }}" decoding="async" loading="eager">
+      </div>
+    {{ else if $heroKicker }}
+      <p class="yg-hero-kicker {{ if eq $heroFx "glow" }}yg-slide-up is-delay-1{{ end }}">{{ $heroKicker }}</p>
+    {{ end }}
+    <h1 class="{{ $titleClass }}"{{ if $homeSimple }} style="background:none!important;color:#eaf3ff!important;-webkit-text-fill-color:#eaf3ff!important;"{{ end }}>{{ $heroTitle }}</h1>
+    {{ if and $homeSimple $heroWorkItems }}
+      <ul class="yg-hero-work-list {{ if eq $heroFx "glow" }}yg-slide-up is-delay-3{{ end }}">
+        {{ range $heroWorkItems }}
+          <li>{{ . }}</li>
+        {{ end }}
+      </ul>
+    {{ end }}
+    {{ if and (not $homeSimple) $heroSubtitle }}
+      <p class="yg-hero-subtitle {{ if eq $heroFx "glow" }}yg-slide-up is-delay-3{{ end }}">{{ $heroSubtitle }}</p>
+    {{ end }}
+    {{ if not $homeSimple }}
+      <div class="yg-hero-actions {{ if eq $heroFx "glow" }}yg-slide-up is-delay-4{{ end }}">
+        {{ with .Params.cta_primary }}
+          <a class="yg-btn" href="{{ .url | safeURL }}">{{ .text }}</a>
+        {{ end }}
+        {{ with .Params.cta_secondary }}
+          <a class="yg-btn yg-btn-ghost" href="{{ .url | safeURL }}">{{ .text }}</a>
+        {{ end }}
+      </div>
+    {{ end }}
+  </div>
+</section>

@@ -1,32 +1,56 @@
-baseURL = 'https://spirytus79j-sys.github.io/'
-languageCode = 'zh-CN'
-title = '杭州旸谷智能科技有限公司'
-theme = 'ananke'
+baseURL = "https://spirytus79j-sys.github.io/"
+languageCode = "zh-CN"
+title = "杭州旸谷智能科技有限公司"
+theme = "ananke"
+disableKinds = ["taxonomy", "term"]
 
-# 导航菜单
+[params]
+  description = "专注分布式智能光纤传感与水务管网监测，为城市供水安全提供监测、检测与物探一体化能力。"
+  custom_css = ["ananke/css/yanggu-theme.css", "css/custom.css"]
+  contact_phone = "0571-88210873"
+  contact_wechat = "旸谷智能科技"
+  contact_wechat_qr = "/images/contact/wechat-qr-placeholder.svg"
+  contact_email = "postmaster@ygznkj.top"
+  contact_address = "浙江省杭州市余杭区星运鲲鹏中心7幢16楼"
+  contact_hours = "周一至周五 09:00-18:00"
+  site_logo = ""
+  site_logo_mark = "/images/brand/logo-mark.webp"
+  site_logo_lockup = "/images/brand/logo-lockup.webp"
+  site_logo_lockup_bright = "/images/brand/logo-lockup-bright.webp"
+  site_logo_alt = "杭州旸谷智能科技有限公司 Logo"
+  site_brand_short = "旸谷智能"
+  body_classes = "yanggu-site-bg"
+
 [[menu.main]]
   name = "首页"
   url = "/"
   weight = 1
+
+[[menu.main]]
+  name = "产品"
+  url = "/products/"
+  weight = 2
+
+[[menu.main]]
+  name = "解决方案"
+  url = "/solutions/"
+  weight = 3
+
+[[menu.main]]
+  name = "案例介绍"
+  url = "/cases/"
+  weight = 4
+
 [[menu.main]]
   name = "关于我们"
   url = "/about/"
-  weight = 2
-[[menu.main]]
-  name = "产品与服务"
-  url = "/products/"
-  weight = 3
-[[menu.main]]
-  name = "案例与客户"
-  url = "/cases/"
-  weight = 4
+  weight = 5
+
 [[menu.main]]
   name = "联系我们"
   url = "/contact/"
-  weight = 5
+  weight = 6
 
-# 样式设置
-[params]
-  # 配色：主色#0066CC 辅助#00A3E0 强调#FF9900 深#1A1A2E 浅#F5F7FA
-  background_color_class = 'bg-yanggu-deep'
-  custom_css = ['yanggu-theme.css']
+
+[markup.goldmark.renderer]
+  unsafe = true
